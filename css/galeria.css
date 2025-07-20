@@ -1,0 +1,83 @@
+/* ---------- Estilo Geral ---------- */
+body {
+  background: #940303;
+  font-family: serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- Conteúdo Global ---------- */
+p {
+  line-height: 1.6;
+  letter-spacing: 0.2px;
+  font-size: 15px;
+  color: rgb(23, 61, 39);
+}
+
+h1 {
+  margin: 0 0 10px 0;
+}
+
+
+.li_img{
+   
+    background-color: #fff;
+   border-radius: 15px;            /* cantos arredondados */
+}
+
+
+/* Menu (supondo que seja uma <ul>) */
+
+ul { 
+  margin: 150px auto 0; 
+  padding: 0; 
+  list-style: none; 
+  display: table;
+  width: 600px;
+  text-align: center;
+}
+
+/* Galeria centralizada */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 3rem 2rem;
+  width: 100%;
+  max-width: 1200px; /* limite para centralizar melhor */
+  margin: 0 auto; /* centraliza horizontalmente */
+  box-sizing: border-box;
+}
+
+/* ---------- Responsivo para telas pequenas ---------- */
+@media screen and (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr; /* uma coluna apenas em telas pequenas */
+    padding: 2rem 1rem;
+  }
+}
+
+/* ---------- Figure styling ---------- */
+/* ---------- Figure styling ---------- */
+.grid__figure {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Imagem maior */
+.grid__figure img {
+  width: 100%;
+  max-height: 500px; /* ajustável conforme seu gosto */
+  object-fit: cover;
+  border-radius: 8px; /* opcional, só pra dar charme */
+}
+
+/* Título abaixo da imagem */
+.grid__figure h1 {
+  font-size: 2.2em;
+  text-align: center;
+  margin-top: 0.5rem;
+  color: #fff; /* contraste com fundo escuro */
+}
+
