@@ -1,0 +1,254 @@
+/* ---------- Estilo Geral ---------- */
+body {
+  background: #940303;
+  font-family: serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- Conteúdo Global ---------- */
+p {
+  line-height: 1.6;
+  letter-spacing: 0.2px;
+  font-size: 15px;
+  color: rgb(23, 61, 39);
+}
+
+h1 {
+  margin: 0 0 10px 0;
+}
+
+/* ---------- Containers Individuais ---------- */
+.box-container1 {
+  background-color: #e2ecf7;
+}
+
+.box-container2 {
+  background-color: #f2f1e9;
+}
+
+.box-container3 {
+  background-color: #fcecee;
+}
+
+/* ---------- Configuração base dos containers ---------- */
+.box-container {
+  width: 80%;
+  height: 500px;
+  margin: 60px auto;
+  display: flex;
+  align-items: stretch;
+  box-shadow: 0 0 3px 5px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease-out;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ---------- Estado .right-open para animação ---------- */
+.box-container.right-open .box1-content {
+  flex: 0;
+  padding: 0;
+  opacity: 0;
+}
+
+.box-container.right-open .box1-side {
+  flex: 0;
+}
+
+.box-container.right-open .box2-side {
+  flex: 2;
+}
+
+.box-container.right-open .box2-content {
+  flex: 4;
+  padding: 30px 40px;
+  opacity: 1;
+}
+
+/* ---------- Blocos das caixas ---------- */
+.box1-content,
+.box1-side,
+.box2-side,
+.box2-content {
+  transition: all 0.3s ease-out;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ---------- Conteúdo e botões ---------- */
+.box1-content {
+  flex: 4;
+  padding: 30px 40px;
+  background: whitesmoke;
+}
+
+.box1-side {
+  flex: 2;
+  background: #bac6d2;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.box2-side {
+  flex: 0;
+  background: #a6bdbd;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.box2-content {
+  flex: 0;
+  background: whitesmoke;
+  padding: 0;
+  opacity: 0;
+}
+
+/* ---------- Botões por caixa ---------- */
+.button1 {
+  background: #11526b;
+}
+
+.button2 {
+  background: #4b6c2f;
+}
+
+.button3 {
+  background: #8b2d45;
+}
+
+button {
+  padding: 10px 50px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.32);
+  color: white;
+  margin: 30px 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* ---------- Animação do conteúdo ---------- */
+.content h1,
+.content p {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.5s ease-out;
+}
+
+.content.text-in h1,
+.content.text-in p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- Conteúdo por caixa ---------- */
+.content1 h1 {
+  color: #003366;
+}
+
+.content2 h1 {
+  color: #2e4d19;
+}
+
+.content3 h1 {
+  color: #660022;
+}
+
+
+.box1-side {
+  flex: 2;
+  background: #bac6d2;
+  position: relative;
+  /* permite posicionar itens internos de forma absoluta */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.side-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Botão sobreposto */
+/* Botão sobreposto - Caixa 1 */
+.right-button.button1,
+.right-button.button2,
+.right-button.button3,
+.right-button.button4,
+.right-button.button5,
+.right-button.button6,
+.right-button.button7,
+.right-button.button8,
+.right-button.button9,
+.right-button.button10,
+.right-button.button11,
+.right-button.button12 {
+  position: absolute;
+  bottom: 20px;
+ background: rgba(17, 82, 107, 0.9);
+  right: 20px;
+  z-index: 1;
+  padding: 10px 50px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.32);
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Botão sobreposto - Caixa 1 */
+.left-button.button1,
+.left-button.button2,
+.left-button.button3,
+.left-button.button4,
+.left-button.button5,
+.left-button.button6,
+.left-button.button7,
+.left-button.button8,
+.left-button.button9,
+.left-button.button10,
+.left-button.button11,
+.left-button.button12
+ {
+  position: absolute;
+  bottom: 20px;
+  background: rgba(139, 45, 69, 0.9);
+  left: 20px;
+  z-index: 1;
+  
+  /* azul escuro */
+  padding: 10px 50px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.32);
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Esconde botão esquerdo por padrão */
+.left-button {
+  display: none;
+}
+
+/* Exibe botão esquerdo somente quando estiver em modo .right-open */
+.box-container.right-open .left-button {
+  display: block;
+}
+
+/* Opcional: esconde botão direito quando estiver em modo .right-open */
+.box-container.right-open .right-button {
+  display: none;
+}
