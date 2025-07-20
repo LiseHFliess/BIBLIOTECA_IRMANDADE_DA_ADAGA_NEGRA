@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/galeria.css">
+    <title>Galeria</title>
+</head>
+
+<body>
+
+
+
+    <ul>
+        <li><a href="../index.html">Livros</a></li>
+        <li><a href="../html/sagas.html">Sagas</a></li>
+        <li><a href="../html/personagens.html">Personagens</a></li>
+        <li><a href="../html/autora.html">Autora</a></li>
+        <li><a href="../html/serie.html">Série</a></li>
+        <li><a href="../html/galeria.html">Galeria</a></li>
+    </ul>
+
+
+    <ul class="grid">
+        <li class="li_img">
+            <figure class="grid__figure">
+                <img src="../img/LIVRO1.jpg" alt="">
+                <figcaption>WRATH</figcaption>
+            </figure>
+        </li>
+        <li class="li_img">
+            <figure class="grid__figure">
+                <img src="../img/LIVRO1.jpg" alt="">
+                <figcaption>BETH</figcaption>
+            </figure>
+        </li>
+        <li class="li_img">
+            <figure class="grid__figure">
+                <img src="../img/LIVRO2.jpg"  alt="">
+                <figcaption>RHAGE</figcaption>
+            </figure>
+        </li>
+        <li class="li_img">
+            <figure class="grid__figure">
+                <img src="../img/LIVRO2.jpg"  alt="">
+                <figcaption>MARY LUCE</figcaption>
+            </figure>
+        </li>
+        <li class="li_img">
+            <figure class="grid__figure">
+                <img src="../img/LIVRO3.jpg"  alt="">
+                <figcaption>Zsadist</figcaption>
+            </figure>
+        </li>
+        <li class="li_img">
+            <figure class="grid__figure">
+                <img src="../img/LIVRO3.jpg"  alt="">
+                <figcaption>BELLA</figcaption>
+            </figure>
+        </li>
+        <li class="li_img">
+            <figure class="grid__figure">
+                <img src="../img/LIVRO4.jpg"  alt="">
+                <figcaption>Butch O’Neal</figcaption>
+            </figure>
+        </li>
+        <li class="li_img">
+            <figure class="grid__figure">
+                <img src="../img/LIVRO4.jpg"  alt="">
+                <figcaption> Marissa</figcaption>
+            </figure>
+        </li>
+        <li class="li_img">
+            <figure class="grid__figure">
+                <img src="../img/LIVRO5.jpg"  alt="">
+                <figcaption> Vishous </figcaption>
+            </figure>
+        </li>
+         <li class="li_img">
+            <figure class="grid__figure">
+                <img src="../img/LIVRO5.jpg"  alt="">
+                <figcaption> Dra. Jane Whitcomb</figcaption>
+            </figure>
+        </li>
+        
+        <li class="li_img">
+            <figure class="grid__figure">
+                <img src="../img/LIVRO6.jpg"  alt="">
+                <figcaption> Phury </figcaption>
+            </figure>
+        </li>
+        <li class="li_img">
+            <figure class="grid__figure">
+                <img src="../img/LIVRO6.jpg"  alt="">
+                <figcaption> Cormia</figcaption>
+            </figure>
+        </li>
+        <li class="li_img">
+            <figure class="grid__figure">
+                <img src="../img/LIVRO7.jpg"  alt="">
+                <figcaption> Rehvenge </figcaption>
+            </figure>
+        </li>
+        <li class="li_img">
+            <figure class="grid__figure">
+                <img src="../img/LIVRO7.jpg"  alt="">
+                <figcaption>  Ehlena</figcaption>
+            </figure>
+        </li>
+        <li class="li_img">
+            <figure class="grid__figure">
+                <img src="../img/LIVRO8.jpg"  alt="">
+                <figcaption> John Matthew </figcaption>
+            </figure>
+        </li>
+        <li class="li_img">
+            <figure class="grid__figure">
+                <img src="../img/LIVRO8.jpg"  alt="">
+                <figcaption>  Xhex</figcaption>
+            </figure>
+        </li>
+          <li class="li_img">
+            <figure class="grid__figure">
+                <img src="../img/LIVRO9.jpg"  alt="">
+                <figcaption> Payne </figcaption>
+            </figure>
+        </li>
+        <li class="li_img">
+            <figure class="grid__figure">
+                <img src="../img/LIVRO9.jpg"  alt="">
+                <figcaption>   Dr. Manuel Manello </figcaption>
+            </figure>
+        </li class="li_img">
+        <li class="li_img">
+            <figure class="grid__figure">
+                <img src="../img/LIVRO10.jpg"  alt="">
+                <figcaption> Tohrment  </figcaption>
+            </figure>
+        </li>
+        <li class="li_img">
+            <figure class="grid__figure">
+                <img src="../img/LIVRO10.jpg"  alt="">
+                <figcaption>  Autumn </figcaption>
+            </figure>
+        </li >
+        <li class="li_img">
+            <figure class="grid__figure">
+                <img src="../img/LIVRO11.jpg"  alt="">
+                <figcaption> Qhuinn   </figcaption>
+            </figure>
+        </li>
+        <li class="li_img" >
+            <figure class="grid__figure">
+                <img src="../img/LIVRO11.jpg"  alt="">
+                <figcaption>  Blaylock </figcaption>
+            </figure>
+        </li>
+
+
+
+
+        
+    </ul>
+
+
+    <script>
+        const hoverCaptions = document.querySelectorAll('.hover-caption');
+
+        function moveCaptions(e) {
+            const x = e.pageX;
+            const y = e.pageY;
+            hoverCaptions.forEach(caption => {
+                caption.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+            });
+        }
+
+        document.addEventListener('mousemove', moveCaptions);
+    </script>
+
+</body>
+
+</html>
